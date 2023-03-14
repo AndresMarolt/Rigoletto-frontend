@@ -1,0 +1,22 @@
+.error-page {
+  margin: 100px auto;
+  text-align: center;
+}
+.error-page .fa-triangle-exclamation {
+  width: 20%;
+  color: rgb(255, 115, 115);
+}
+.error-page_content {
+  font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+  .error-page {
+    margin: 140px auto;
+  }
+}
+@media (min-width: 992px) {
+  .error-page {
+    margin: 90px auto;
+  }
+}/*# sourceMappingURL=ErrorPage.css.map */

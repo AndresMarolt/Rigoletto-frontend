@@ -1,0 +1,86 @@
+.admin_content-container {
+    box-shadow: 0px 0px 9px 1px rgb(201, 201, 201);
+    background-color: white;
+    border-radius: 5px;
+    padding: 15px;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.admin-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 5px;
+    margin-top: 20px;
+    
+    button {
+        color: white;
+        border: none;
+        padding: 8px 8px;
+        cursor: pointer;
+    }
+
+    .add-btn {
+        background-color: #008c45;
+    }
+    .delete-btn {
+        background-color: #cd212a;
+    }
+}
+
+.admin {
+    width: 100%;
+    text-align: center;   
+}
+
+.create {
+    width: 100%;
+
+    form {
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 1rem;
+        background-color: white;
+        width: 85%;
+        margin: 0 auto;
+
+        .crud_formfield {
+            width: 100%;
+            margin: 5px auto;
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+
+            input, textarea {
+                width: 70%; 
+            }
+
+            label {
+                width: 25%;
+                text-align: right;
+            }
+        }
+
+        button {
+            margin-top: 10px;
+            background-color: green;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            padding: 10px;
+        }
+    }
+}
+
+
+
+
+@media(min-width: 768px) {
+
+}
+
+@media(min-width: 992px) {
+    
+}

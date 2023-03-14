@@ -1,0 +1,12 @@
+@import "./../../utilities/named_variables.scss";
+
+footer {
+    background-color: black;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    .leyenda {
+        color: white;
+        margin: 0;
+    }
+}

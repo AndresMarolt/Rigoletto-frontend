@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Mukta&display=swap');
+:root {
+  --fuenteGral: 'Lato', sans-serif;
+  --fuenteLogo: 'Kiwi Maru', serif;   
+  --fuenteTitulo: 'Grand Hotel', cursive;
+
+  --verde: #008c45;
+  --blanco: #f4f5f0;
+  --rojo: #cd212a;
+  --negro: #0c0c0cff;
+  --gris: #e4e4e4;
+  --grisOscuro: #616161;
+}
+
+body {
+  background-color: var(--blanco);
+}
+
+.Container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+main {
+  min-height: 69vh;
+}
+
+@media(min-width: 768px) {
+  .Container {
+    width: 90%;
+  }
+}
+
+@media(min-width: 992px) {
+  .Container {
+    width: 85%;
+  }
+}
+
+a, p, button, input {
+  font-family: var(--fuenteHeading);
+}
+

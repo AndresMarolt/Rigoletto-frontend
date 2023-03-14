@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+.counter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+.counter-count {
+  font-size: 20px;
+  display: inline;
+  margin: 0;
+  padding: 0 10px;
+}
+.counter-btn {
+  display: inline;
+  font-size: 20px;
+  width: 30px;
+  padding: 0;
+  border: 0;
+  background-color: #008c45;
+  color: white;
+  border-radius: 8px;
+  padding: 5px 0;
+}
+
+.addItemBtn {
+  display: block;
+  margin: 0 auto;
+  background-color: #cd212a;
+  border: none;
+  color: white;
+  padding: 15px 8px;
+  font-weight: bold;
+  border-radius: 10px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .counter-btn {
+    cursor: pointer;
+  }
+  .addItemBtn {
+    cursor: pointer;
+  }
+}/*# sourceMappingURL=ItemCounter.css.map */

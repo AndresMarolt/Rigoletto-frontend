@@ -1,0 +1,249 @@
+@import "../../../utilities/named_variables.scss";
+
+.presentacion {
+    margin: 20px 0;
+    width: 100%;
+    position: relative; 
+
+    &-img {
+        width: 100%;
+        height: 400px;
+    }
+
+    &-over {
+        position: absolute;
+        top: 35px;
+        left: 20px;
+        
+        &-texto {
+            color: white;
+            font-size: 14px;
+            width: 60%;
+            // text-shadow: 1px 1px 1px black;
+            text-shadow:
+            0.04em 0 black,
+            0 0.04em black,
+            -0.04em 0 black,
+            0 -0.04em black;
+            
+            
+            &-titulo {
+                margin: 5px 0;
+                font-weight: bold;
+                font-size: 18px;
+                width: 100%;
+                font-family: $fuenteLogo;
+            }
+            
+            &-marca {
+                margin: 5px 0;
+                font-family: $fuenteLogo;
+                font-size: 30px;
+                font-weight: bold;
+                position: relative;
+                left: 15%;
+            }
+        }
+        
+        .linea {
+            border-top: 2px solid $verde;
+            width: 30%;
+            display: flex;
+        }
+    }
+
+    &-over-derecha {
+        position: absolute;
+        top: 35px;
+        right: 20px;
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+
+        &-texto {
+            color: white;
+            font-size: 14px;
+            width: 60%;
+            position: rela;
+            // text-shadow: 1px 1px 1px black;
+            text-shadow:
+            0.04em 0 black,
+            0 0.04em black,
+            -0.04em 0 black,
+            0 -0.04em black;
+            
+            &-titulo {
+                margin: 5px 0;
+                font-weight: bold;
+                font-size: 18px;
+                width: 100%;
+                text-align: right;
+                font-family: $fuenteLogo;
+            }
+            
+            &-marca {
+                margin: 5px 0;
+                font-family: $fuenteLogo;
+                font-size: 30px;
+                font-weight: bold;
+                position: relative;
+                right: 50px;
+            }
+        }
+
+        .linea {
+            border-top: 2px solid $verde;
+            width: 30%;
+            display: flex;
+            position: absolute;
+            right: 0px;
+        }
+    }
+}
+
+.separador {
+    border-top: 2px solid $rojo;
+    width: 70%;
+    display: flex;
+}
+
+
+
+@media(min-width: 768px) {
+    .presentacion {
+        display: flex;
+
+        &-img {
+            width: 50%;
+            height: 500px;
+        }
+
+        &-over {
+            top: 10%;
+            left: 10%;
+            width: 40%;
+            position: absolute;
+
+            &-texto {
+                color: black;
+                margin: 0;
+                font-size: 16px;
+                // text-shadow: 1px 1px 30px white;
+                text-shadow:
+                0.04em 0 white,
+                0 0.04em white,
+                -0.04em 0 white,
+                0 -0.04em white;
+
+                &-titulo {
+                    font-size: 22px;
+                    margin-top: 20px;
+                }
+
+                &-marca {
+                    font-size: 34px;
+                    position: relative;
+                    left: 45px; 
+                    margin-bottom: 30px;
+                }
+            }
+
+        }
+
+        &-over-derecha {
+            top: 10%;
+            right: 10%;
+            width: 40%;
+            position: absolute;
+    
+            &-texto {
+                color: black;
+                margin: 0;
+                font-size: 16px;
+                // text-shadow: 1px 1px 30px white;
+                text-shadow:
+                0.04em 0 white,
+                0 0.04em white,
+                -0.04em 0 white,
+                0 -0.04em white;
+
+                &-titulo {
+                    font-size: 22px;
+                    margin-top: 20px;
+
+                }
+
+                &-marca {
+                    font-size: 34px;
+                    position: relative;
+                    left: -45px; 
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+
+    .justify-end {
+        justify-content: flex-end;
+    }
+}
+
+
+@media(min-width: 992px) {
+    .presentacion {
+        width: 95%;
+        margin: 20px auto;
+        &-img {
+            height: 800px;
+        }
+
+        &-over {
+            top: 20%;
+            left: 12%;
+
+            &-texto {
+                font-size: 18px;
+
+                &-titulo {
+                    font-size: 32px;
+                }
+                
+                &-marca {
+                    position: relative;
+                    left: 40px;
+                    font-size: 50px;
+                    margin-bottom: 30px;
+                }
+            }
+
+            .linea {
+                width: 20%;
+            }
+        }
+
+        &-over-derecha {
+            top: 20%;
+            right: 12%;
+
+            &-texto {
+                font-size: 18px;
+
+                &-titulo {
+                    font-size: 32px;
+                }
+                
+                &-marca {
+                    position: relative;
+                    left: -40px;
+                    font-size: 50px;
+                    margin-bottom: 30px;
+                }
+            }
+            
+            .linea {
+                width: 20%;
+            }
+        }
+    }
+}

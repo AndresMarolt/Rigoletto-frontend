@@ -1,0 +1,58 @@
+@import '../../utilities/named_variables.scss';
+
+.notification {
+    position:fixed;
+    top: 100px;
+    right: 0px;
+    padding: 5px;
+    box-shadow: -5px 2px 15px black;
+
+    -webkit-animation: notifAnimation 3s infinite;
+    animation: notifAnimation 3s forwards;
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    animation-direction: normal;
+    -webkit-animation-direction: normal;
+
+    &_text {
+        color: white;
+        text-shadow: none;
+    }
+}
+
+@-webkit-keyframes notifAnimation {
+    0% {
+        right: -50%;
+    }
+    5% {
+        right: 0%;
+    }
+    85% {
+        right: 0%;
+    }
+    100% {
+        right: -50%;
+    }
+}
+@keyframes notifAnimation {
+    0% {
+        right: -50%;
+    }
+    5% {
+        right: 0%;
+    }
+    85% {
+        right: 0%;
+    }
+    100% {
+        right: -50%;
+    }
+}
+
+.green {
+    background-color: $verde;
+}
+
+.red {
+    background-color: $rojo;
+}

@@ -1,0 +1,26 @@
+@import "./../../utilities/named_variables.scss";
+
+.follow {
+    margin: 0;
+    padding-bottom: 30px;
+    
+    &_title {
+        font-size: 20px;
+        z-index: 1000;
+        position: relative;
+        font-family: $fuenteLogo;
+        font-weight: lighter;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    &_icons {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+
+        .rrss_icon {
+            width: 40px;
+        }
+    }
+}

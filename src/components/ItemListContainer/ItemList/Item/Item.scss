@@ -1,0 +1,91 @@
+@import "./../../utilities/named_variables.scss";
+
+.Item-card {
+    border: 1px solid rgb(179, 179, 179);
+    padding: 20px;
+    
+    .Item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 20px;
+    
+        &_data {
+                
+            &-title {
+                font-family: $fuenteLogo;
+                font-size: 25px;
+                font-weight: bold;
+                margin-top: 0;
+            }
+
+            &-price {
+                font-size: 18px;
+            }
+    
+            &-orderBtn {
+                display: block;
+                text-align: center;
+                text-decoration: none;
+                margin-top: 5px;
+                background-color: $rojo;
+                color: white;
+                border: none;
+                padding: 10px 0;
+                font-weight: bold;
+                cursor: pointer;
+                transition: .3s ease-in-out;
+                border-radius: 8px;
+
+                &:hover {
+                    background-color: #d36167;
+                }
+            }
+        }
+    
+        &_img {
+            margin: auto 0;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 220px;
+            }
+        } 
+    }
+
+}
+
+@media(min-width: 768px) {
+    .Item-card {
+        
+        .Item {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            margin-bottom: 0;
+        
+            &_data {
+                width: 75%;
+                
+                &-orderBtn {
+                    &:hover {
+                        background-color: #ce373e;
+                    }
+                }
+            }
+        
+            &_img {
+                margin: auto 0;
+                width: 35%;
+                img {
+                    width: 100%;
+                    height: 160px;
+                }
+            } 
+        }
+    }
+}
+
+@media(min-width: 992px) {
+    
+}

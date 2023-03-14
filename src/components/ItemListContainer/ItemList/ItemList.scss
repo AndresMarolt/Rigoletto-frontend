@@ -1,0 +1,18 @@
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+@media(min-width: 768px) {
+    .item-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } 
+}
+
+@media(min-width: 992px) {
+    
+}

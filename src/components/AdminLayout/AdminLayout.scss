@@ -1,0 +1,48 @@
+.admin-header {
+    background-color: #008c45;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+
+    h4 {
+        width: 95%;
+        margin: 0 auto;
+        a {
+            
+            margin: 0;
+            color: white;
+            text-decoration: none;
+        }
+    } 
+}
+
+.admin-main {
+    display: flex;
+    min-height: 92vh;
+
+}
+
+.sidebar {
+    width: 10%;
+    background-color: #004a25;
+    ul {
+        list-style: none;
+        margin-top: 20px;
+
+        li {
+            a {
+                color: white;
+                font-weight: bold;
+                text-decoration: none;
+            }
+
+            &:not(:last-of-type) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+.content {
+    width: 90%;
+}

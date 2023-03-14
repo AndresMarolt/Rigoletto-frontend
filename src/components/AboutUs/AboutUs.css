@@ -1,0 +1,21 @@
+.aboutus {
+  margin: 20px auto;
+}
+.aboutus-img {
+  width: 100%;
+}
+
+@media (min-width: 992px) {
+  .aboutus {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    margin: 40px auto;
+  }
+  .aboutus-img {
+    width: 50%;
+  }
+  .aboutus-text {
+    width: 50%;
+  }
+}/*# sourceMappingURL=AboutUs.css.map */

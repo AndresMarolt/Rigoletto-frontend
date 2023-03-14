@@ -1,0 +1,14 @@
+.cart-list_item {
+  margin-bottom: 15px;
+}
+.cart-list_item img {
+  width: 30%;
+  height: 100px;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .cart-list_item img {
+    width: 10%;
+  }
+}/*# sourceMappingURL=CartItem.css.map */

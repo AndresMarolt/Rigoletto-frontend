@@ -1,0 +1,38 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+.notification {
+  position: fixed;
+  top: 100px;
+  right: 0px;
+  padding: 5px;
+  box-shadow: -5px 2px 15px black;
+  animation: notifAnimation 3s forwards;
+  animation-duration: 3s;
+  animation-direction: normal;
+  -webkit-animation-direction: normal;
+}
+.notification_text {
+  color: white;
+  text-shadow: none;
+}
+@keyframes notifAnimation {
+  0% {
+    right: -50%;
+  }
+  5% {
+    right: 0%;
+  }
+  85% {
+    right: 0%;
+  }
+  100% {
+    right: -50%;
+  }
+}
+.green {
+  background-color: #008c45;
+}
+
+.red {
+  background-color: #cd212a;
+}/*# sourceMappingURL=Notification.css.map */

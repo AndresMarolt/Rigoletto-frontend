@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+.svg-inline--fa {
+  height: unset;
+}
+
+nav {
+  height: 30%;
+  background-color: black;
+  font-family: "Kiwi Maru", serif;
+  display: flex;
+  align-items: center;
+}
+nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+}
+nav ul li {
+  list-style-type: none;
+  padding: 5px 0;
+}
+nav ul .navegacion-enlace {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  border: none;
+}
+nav ul #four {
+  position: absolute;
+  right: 5%;
+}
+nav ul .cartwidget {
+  color: white;
+  display: flex;
+  gap: 5px;
+}
+nav ul .cartwidget-cantidad {
+  margin: 0;
+}
+
+.user-icon {
+  color: white;
+  margin: 0 auto;
+  width: 5%;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav ul #four {
+    position: unset;
+  }
+}
+@media (min-width: 992px) {
+  nav ul li .navegacion-enlace {
+    font-size: 18px;
+    transition: 0.25s ease-in-out;
+  }
+  nav ul li .navegacion-enlace:hover {
+    font-weight: bold;
+  }
+  #four:hover {
+    font-weight: bold;
+  }
+}/*# sourceMappingURL=NavBar.css.map */

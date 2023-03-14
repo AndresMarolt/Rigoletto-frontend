@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+footer {
+  background-color: black;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+}
+footer .leyenda {
+  color: white;
+  margin: 0;
+}/*# sourceMappingURL=Footer.css.map */

@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+.contact {
+  position: relative;
+  z-index: 10;
+}
+
+.fondo-contactos {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  opacity: 0.05;
+  height: 100%;
+}
+
+.contacto_titulo {
+  z-index: 1000;
+  position: relative;
+  font-family: "Kiwi Maru", serif;
+  font-weight: lighter;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 30px;
+}
+
+.contacto {
+  position: relative;
+  z-index: 1000;
+  margin: 20px auto 0 auto;
+}
+.contacto form {
+  padding: 10px 0;
+  width: 100%;
+}
+.contacto form .dateAndTime {
+  margin-top: 5px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.contacto form .group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+.contacto form .group label {
+  font-weight: bold;
+}
+.contacto form .group input {
+  padding: 10px;
+  border: 1px solid rgb(177, 177, 177);
+  border-radius: 10px;
+}
+.contacto form .group textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(177, 177, 177);
+}
+.contacto .mapa {
+  width: 95%;
+  height: 400px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+.contacto .mapa_iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.btn-container {
+  text-align: center;
+  margin-top: 20px;
+}
+.btn-container .btn {
+  border: none;
+  font-family: "Kiwi Maru", serif;
+  width: 50%;
+  font-size: 16px;
+  margin: auto;
+  cursor: pointer;
+  background-color: #008c45;
+  color: #f4f5f0;
+  padding: 12px 0;
+}
+
+.follow {
+  margin: 0;
+  padding-bottom: 30px;
+}
+.follow_title {
+  font-size: 20px;
+  z-index: 1000;
+  position: relative;
+  font-family: "Kiwi Maru", serif;
+  font-weight: lighter;
+  text-align: center;
+  padding-top: 30px;
+}
+.follow_icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.follow_icons .rrss_icon {
+  width: 40px;
+}
+
+@media (min-width: 768px) {
+  .contacto {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .contacto .formulario {
+    width: 100%;
+    margin-right: 10px;
+  }
+  .contacto .formulario form {
+    width: 100%;
+  }
+  .contacto .mapa {
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+    border-left: 1px solid rgb(157, 157, 157);
+  }
+}/*# sourceMappingURL=Contact.css.map */

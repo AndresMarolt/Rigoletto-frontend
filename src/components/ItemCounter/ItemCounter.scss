@@ -1,0 +1,56 @@
+@import "./../../utilities/named_variables.scss";
+
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    
+    
+    &-count {
+        font-size: 20px;
+        display: inline;
+        margin: 0;
+        padding: 0 10px;
+    }
+    
+    &-btn {
+        display: inline;
+        font-size: 20px;
+        width: 30px;
+        padding: 0;
+        border: 0;
+        background-color: $verde;
+        color: white;
+        border-radius: 8px;
+        padding: 5px 0;
+    }
+}
+
+.addItemBtn {
+    display: block;
+    margin: 0 auto;
+    background-color: $rojo;
+    border: none;
+    color: white;
+    padding: 15px 8px;
+    font-weight: bold;
+    border-radius: 10px;
+    width: 100%;
+}
+
+@media(min-width: 768px) {
+    .counter {
+
+        &-btn {
+            cursor: pointer;
+        }
+    }
+
+    .addItemBtn {
+        cursor: pointer;
+    }
+}

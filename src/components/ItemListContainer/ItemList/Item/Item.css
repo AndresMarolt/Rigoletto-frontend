@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap");
+.Item-card {
+  border: 1px solid rgb(179, 179, 179);
+  padding: 20px;
+}
+.Item-card .Item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.Item-card .Item_data-title {
+  font-family: "Kiwi Maru", serif;
+  font-size: 25px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.Item-card .Item_data-price {
+  font-size: 18px;
+}
+.Item-card .Item_data-orderBtn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 5px;
+  background-color: #cd212a;
+  color: white;
+  border: none;
+  padding: 10px 0;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  border-radius: 8px;
+}
+.Item-card .Item_data-orderBtn:hover {
+  background-color: #d36167;
+}
+.Item-card .Item_img {
+  margin: auto 0;
+  width: 100%;
+}
+.Item-card .Item_img img {
+  width: 100%;
+  height: 220px;
+}
+
+@media (min-width: 768px) {
+  .Item-card .Item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-bottom: 0;
+  }
+  .Item-card .Item_data {
+    width: 75%;
+  }
+  .Item-card .Item_data-orderBtn:hover {
+    background-color: #ce373e;
+  }
+  .Item-card .Item_img {
+    margin: auto 0;
+    width: 35%;
+  }
+  .Item-card .Item_img img {
+    width: 100%;
+    height: 160px;
+  }
+}/*# sourceMappingURL=Item.css.map */
