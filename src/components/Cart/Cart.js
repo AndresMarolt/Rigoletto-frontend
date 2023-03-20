@@ -3,28 +3,43 @@ import { useSelector } from 'react-redux';
 import CartItem from './CartItem/CartItem';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faShoppingBasket, faBan, faBasketShopping} from '@fortawesome/free-solid-svg-icons'
+import { useEffect, useState } from 'react';
 
 const Cart = () => {
+    const [total, setTotal] = useState(0);
+    const cart = useSelector(state => state.cart);
+    const allItems = useSelector(state => state.items.items);
 
-    const cartItems = useSelector(state => state.cart.items)
-
-    const total = cartItems.reduce((accumulator, element) => {
-        return accumulator + (element.price * element.quantity);
-    }, 0);
+    console.log("CART");
+    console.log(cart.items);
     
-    return (
+    const func = async () => {
+        let aux = await cart.items.map(cartItem => {
+            let auxItem = allItems.find(item => item._id === cartItem.id);
+            return {...auxItem, quantity: cartItem.quantity};
+        })
+        let totalAux = await aux?.reduce((accumulator, element) => {
+            return accumulator + (element.price * element.quantity);
+        }, 0);
+        setTotal(totalAux);
+    }
+    useEffect(() => {
+        func();
+    }, [cart]);
+    
+    return(
         <div className="Container cart">
-            <h3>Carrito {!cartItems.length && "vacío"} </h3>
+            <h3>Carrito {!cart.items.length && "vacío"} </h3>
 
             {
-                cartItems.length ? (
+                cart.items.length ? (
                     <>
                         <ul className='cart-list'>
-                            {
-                                cartItems?.map(item => (
-                                    <CartItem key={item._id} {...item}/>
-                                ))
-                            }
+                        {
+                        cart.items.map((it) => (
+                                <CartItem key={it.id} it={it} cart={cart} allItems={allItems} func={func}/>
+                            ))
+                        }
                         </ul>
 
                         <div className='cart_total'>
@@ -43,7 +58,7 @@ const Cart = () => {
                     </div>
                 )
             }
-            
+
         </div>
     )
 }

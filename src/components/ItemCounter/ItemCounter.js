@@ -4,7 +4,7 @@ import './ItemCounter.css'
 
 const ItemCounter = ({onAdd, itemId, initial}) => {
 
-    const itemsInCart = useSelector(state => state.cart.items.find(item => item._id === itemId)?.quantity)
+    const itemsInCart = useSelector(state => state.cart.items?.find(item => item._id === itemId)?.quantity)
     const [count, setCount] = useState(1);
 
     const decreaseCount = () => {

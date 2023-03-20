@@ -18,6 +18,10 @@
   justify-content: center;
   gap: 10px;
 }
+.follow_icons a {
+  text-decoration: none;
+  color: black;
+}
 .follow_icons .rrss_icon {
   width: 40px;
 }/*# sourceMappingURL=Follow.css.map */

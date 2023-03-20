@@ -8,7 +8,6 @@ import './CartWidget.css'
 const CartWidget = () => {
 
     const [quantity, setQuantity] = useState(0);
-    const dispatch = useDispatch();
     const items = useSelector(state => state.cart.items)
 
     useEffect(() => { 

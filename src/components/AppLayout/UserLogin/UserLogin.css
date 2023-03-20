@@ -1,0 +1,23 @@
+.input_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(190, 190, 190);
+}
+.input_container input {
+  width: 85%;
+  border-radius: 0 !important;
+}
+.input_container .fa-eye {
+  width: 8%;
+  cursor: pointer;
+  color: gray;
+  padding: 5px;
+}
+.input_container .fa-eye:hover {
+  color: black;
+}
+
+.change_login-text {
+  margin-top: 20px;
+}/*# sourceMappingURL=UserLogin.css.map */

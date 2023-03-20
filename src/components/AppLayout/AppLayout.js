@@ -8,6 +8,7 @@ import Cart from "../Cart/Cart";
 import Home from "../Home/Home";
 import ErrorPage from "../ErrorPage/ErrorPage";
 
+
 import { Routes, Route } from "react-router-dom";
 
 
@@ -26,6 +27,7 @@ const AppLayout = () => {
                 <Route path="/reservas" element={<Contact />} />
                 <Route path="/nosotros" element={<AboutUs />} />
                 <Route path="/cart" element={<Cart />} />
+                
                 <Route path="/*" element={<ErrorPage />} />
             </Routes>
             </main>

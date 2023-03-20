@@ -3,30 +3,33 @@ import { useSelector } from 'react-redux';
 import AppLayout from './components/AppLayout/AppLayout';
 import AdminLayout from './components/AdminLayout/AdminLayout';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { CartContextProvider } from './context/CartContext';
 import AdminLogin from './components/AdminLayout/AdminLogin/AdminLogin';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import UserLogin from './components/AppLayout/UserLogin/UserLogin';
+import UserSignup from './components/AppLayout/UserSignup/UserSignup';
 
 function App() {
 
-  const authAdmin = useSelector(state => state.authAdmin.authData.token);
+  const authAdmin = useSelector(state => state.authAdmin.authData?.token);
 
   return (
     <div className="App">
-      <CartContextProvider>
-        <BrowserRouter>
-          <Routes>
+      <BrowserRouter>
+        <Routes>
 
-            <Route path='/admin/*' element={<PrivateRoute auth={authAdmin} navigateTo='/admin-login'/>}>
-              <Route path="/admin/*" element={<AdminLayout />} />
-            </Route>
-            <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path='/admin/' element={<PrivateRoute auth={authAdmin} navigateTo='/admin-login'/>}>
+            <Route path="/admin/" element={<AdminLayout />} />
+            <Route path="/admin/*" element={<AdminLayout />} />
+          </Route>
+          <Route path="/admin-login" element={<AdminLogin />} />
 
-            <Route path="/*" element={<AppLayout/>} />    
+          <Route path="/login" element={<UserLogin />} />
+          <Route path="/signup" element={<UserSignup />} />
 
-          </Routes>
-        </BrowserRouter>
-      </CartContextProvider>
+          <Route path="/*" element={<AppLayout/>} />    
+
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

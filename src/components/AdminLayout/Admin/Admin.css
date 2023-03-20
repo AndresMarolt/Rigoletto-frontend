@@ -24,8 +24,8 @@
 .admin-buttons .add-btn {
   background-color: #008c45;
 }
-.admin-buttons .delete-btn {
-  background-color: #cd212a;
+.admin-buttons .logout-btn {
+  background-color: gray;
 }
 
 .admin {

@@ -1,22 +1,28 @@
-export const addToCart = (item) => async (dispatch) => {
+import * as api from '../../api/index.js'
+
+export const addToCart = (item, cart) => async (dispatch) => {
     try {
-        dispatch({type: 'ADD', payload: item})
+        const {data} = await api.addToCart(item, cart);
+        dispatch({type: 'SET_CART', payload: data})
     } catch (error) {
         console.log(error);
     }
 }
 
-export const updateItemQuantity = (item) => async (dispatch) => {
+export const updateItemQuantity = (item, cart) => async (dispatch) => {
     try {
-        dispatch({type: 'UPDATE_QUANTITY', payload: item})
+        const {data} = await api.updateCartItem(item, cart);
+        dispatch({type: 'UPDATE_CART', payload: data})
     } catch (error) {
         console.log(error);
     }
 }
 
-export const deleteFromCart = (item) => async (dispatch) => {
+export const deleteFromCart = (itemId, cartId) => async (dispatch) => {
     try {
-        dispatch({type: 'DELETE_ITEM', payload: item});
+        const {data} = await api.deleteCartItem(itemId, cartId);
+        console.log(data);
+        dispatch({type: 'SET_CART', payload: data});
     } catch (error) {
         console.log(error);
     }

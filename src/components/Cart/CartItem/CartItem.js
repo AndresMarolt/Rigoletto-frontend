@@ -1,38 +1,47 @@
 import { updateItemQuantity, deleteFromCart } from "../../../redux/actions/cart";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import './CartItem.css'
+import { useEffect, useState } from "react";
 
-const CartItem = ({_id, category, img, title, price, description, quantity}) => {
-
+const CartItem = ({it, cart, allItems}) => {
+    const itemDetail = allItems.find(item => item._id === it.id);
+    const [quantityInCart, setQuantityInCart] = useState(it.quantity);
     const dispatch = useDispatch();
 
+    useEffect(() => {
+        dispatch(updateItemQuantity({_id: it.id, quantity: quantityInCart}, cart));
+    }, [quantityInCart])
+
     const decreaseQuantity = () => {
-        if(quantity > 1) {
-            quantity--;
-            dispatch(updateItemQuantity({ _id, category, img, title, price, description, quantity }));
+        if(quantityInCart > 1) {
+            setQuantityInCart(quantityInCart-1);
         }
     }
 
     const increaseQuantity = () => {
-        quantity++;
-        dispatch(updateItemQuantity({ _id, category, img, title, price, description, quantity }));
+        setQuantityInCart(quantityInCart+1);
     }
 
-    const deleteItem = () => {
-        dispatch(deleteFromCart({ _id, category, img, title, price, description, quantity }))
+    const deleteItemFromCart = () => {
+        console.log("CARTID");
+        console.log(cart.id);
+        dispatch(deleteFromCart(it.id, cart.id))
     }
 
     return (
-        <li key={_id} className='cart-list_item'>
-            <img src={`http://localhost:5000/${img}`} />
+        <li className='cart-list_item'>
+            <img src={`http://localhost:5000/${itemDetail.img}`} />
             <div>
-                <p>{title}</p>
-                <p>Precio: ${price}</p>
-                <p>Cantidad: <button onClick={() => decreaseQuantity()}>-</button>{quantity}<button onClick={() => increaseQuantity()}>+</button></p>
-                <button onClick={() => deleteItem()}>Eliminar</button>
+                <p>{itemDetail.title}</p>
+                <p>Precio: ${itemDetail.price}</p>
+                <p>Cantidad: <button onClick={() => decreaseQuantity()}>-</button>{quantityInCart}<button onClick={() => increaseQuantity()}>+</button></p>
+                <button onClick={deleteItemFromCart}>Eliminar</button>
             </div>
         </li>
+            
     )
+
+
 }
 
 export default CartItem;

@@ -1,9 +1,10 @@
 import './Header.css'
 import NavBar from './NavBar/NavBar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {faTwitter, faInstagram, faFacebook, faWhatsapp} from '@fortawesome/free-brands-svg-icons'
+import {faTwitter, faInstagram, faFacebook, faWhatsapp, faSignOutAlt} from '@fortawesome/free-brands-svg-icons'
 import { Link } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const Header = () => {
 

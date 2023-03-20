@@ -65,7 +65,16 @@ nav ul .cartwidget-cantidad {
   nav ul li .navegacion-enlace:hover {
     font-weight: bold;
   }
-  #four:hover {
+  #four {
+    display: flex;
+    gap: 20px;
+  }
+  #four .signout-icon, #four .login-icon {
+    color: white;
+    cursor: pointer;
+    width: 20px;
+  }
+  #four .signout-icon:hover, #four .login-icon:hover {
     font-weight: bold;
   }
 }/*# sourceMappingURL=NavBar.css.map */

@@ -4,7 +4,6 @@ import Follow from '../Follow/Follow'
 const AboutUs = () => {
     return(
         <div>
-            <img src='./img/fondo-img.jpeg' className='fondo-contactos'></img>
             <h2 className='contacto_titulo Container'>NOSOTROS</h2>
 
             <div className="aboutus Container">

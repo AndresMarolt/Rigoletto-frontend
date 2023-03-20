@@ -75,7 +75,17 @@ nav {
         }
     }
     
-    #four:hover {
-        font-weight: bold;
+    #four{
+        display: flex;
+        gap: 20px;
+        
+        .signout-icon, .login-icon {
+            color: white;
+            cursor: pointer;
+            width: 20px;
+            &:hover {
+                font-weight: bold;
+            }
+        }
     }
 }

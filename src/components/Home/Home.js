@@ -2,6 +2,7 @@ import { useScrollPercentage } from 'react-scroll-percentage';
 import HomeIntro from './HomeIntro/HomeIntro';
 import HomeHero from './HomeHero/HomeHero';
 import HomePromo from './HomePromo/HomePromo';
+import Follow from '../Follow/Follow'
 import './Home.scss'
 
 const Home = () => {
@@ -30,7 +31,7 @@ const Home = () => {
                     </div>
                 </section>  
                 
-
+            <Follow />
             
         </div>
     )

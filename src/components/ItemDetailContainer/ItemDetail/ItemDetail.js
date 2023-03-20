@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { Link } from "react-router-dom"
 import './ItemDetail.css'
 import ItemCounter from "../../ItemCounter/ItemCounter"
 import { useDispatch, useSelector } from "react-redux"
@@ -8,19 +9,22 @@ import Notification from "../../Notification/Notification"
 const ItemDetail = ({_id, title, price, img, description, category}) => {
 
     const dispatch = useDispatch();
-    const itemsInCart = useSelector( state => state.cart.items);
+    const cart = useSelector( state => state.cart);
+    const userData = useSelector( state => state.authUser.userData);
     const [quantityAdded, setQuantityAdded] = useState(null);
     const [showNotification, setShowNotification] = useState(false);
     const [initial, setInitial] = useState();
+    console.log(cart);
 
     const addItem = (quantity) => {
         setQuantityAdded(quantity);
-        const item = { _id, title, price, img, description, category, quantity }
+        const item = { _id, title, price, img, description, category, quantity };
 
-        if(itemsInCart?.some(e => e._id === item._id )) {
-            dispatch(updateItemQuantity(item))
+        if(cart.items?.some(e => e.id === item._id )) {
+
+            dispatch(updateItemQuantity(item, cart))
         } else {
-            dispatch(addToCart(item));
+            dispatch(addToCart(item, cart));
         }
 
         setShowNotification(true);
@@ -46,9 +50,18 @@ const ItemDetail = ({_id, title, price, img, description, category}) => {
                     <p className="detail_text-price">${price}</p>
                     <p className="detail_text-description">{description}</p>
 
-                    <div className="detail_text-add">
-                        <ItemCounter onAdd={addItem} itemId={_id} initial={ 1}/>
-                    </div>
+                    {
+                        userData ?
+                        <div className="detail_text-add">
+                            <ItemCounter onAdd={addItem} itemId={_id} initial={ 1}/>
+                        </div>
+                        :
+                        <div className="detail_login">
+                                <Link to='/login'>
+                                    Iniciá sesión para agregar productos al carrito
+                                </Link>
+                        </div>
+                    }
 
                 </div>
             </div>
